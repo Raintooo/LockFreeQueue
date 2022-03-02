@@ -123,6 +123,11 @@ public:
     virtual ~LockFreeQueue()
     {
         clear();
+    
+        if(m_head)
+        {
+            delete m_head;
+        }
     }
 };
 
